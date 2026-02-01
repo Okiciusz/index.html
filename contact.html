@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iron-Em – kontakt i wycena</title>
+  <meta name="description" content="Kontakt i szybka wycena Iron-Em. Stelaże, nogi, schody, zabudowy koszy, metal + drewno. Kolory RAL." />
+  <meta name="theme-color" content="#0b0f14" />
+  <style>
+    :root{--bg:#0b0f14;--panel:#111826;--text:#e7edf6;--muted:#a8b3c7;--line:rgba(255,255,255,.10);--shadow:0 10px 30px rgba(0,0,0,.45);--radius:18px;--max:1120px}
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:50;background:rgba(11,15,20,.78);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:12px}
+    .brand{font-weight:900;letter-spacing:.3px}
+    .btn{border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--text);padding:10px 14px;border-radius:999px;font-weight:800;font-size:14px;display:inline-flex;gap:10px}
+    .btn:hover{background:rgba(255,255,255,.10)}
+    .card{border:1px solid var(--line);background:rgba(17,24,38,.85);border-radius:var(--radius);box-shadow:var(--shadow)}
+    main{padding:22px 0}
+    .wrap{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    form{padding:18px}
+    label{display:block;font-weight:800;font-size:12px;color:var(--muted);margin:10px 0 6px}
+    input,textarea,select{
+      width:100%;padding:12px 12px;border-radius:14px;border:1px solid var(--line);
+      background:rgba(255,255,255,.04);color:var(--text);outline:none;font-size:14px
+    }
+    textarea{min-height:120px;resize:vertical}
+    .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .hint{color:var(--muted);font-size:12px;margin-top:8px}
+    .contact{padding:18px;display:flex;flex-direction:column;gap:12px}
+    .box{padding:12px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.04)}
+    .box b{display:block;margin-bottom:4px}
+    footer{padding:20px 0;border-top:1px solid var(--line);color:var(--muted)}
+    @media(max-width:980px){.wrap{grid-template-columns:1fr}.row2{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html">Iron-Em</a>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="index.html">Strona główna</a>
+        <a class="btn" href="products.html">Galeria produktów</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <div class="card" style="padding:18px;margin-bottom:14px">
+    <h1 style="margin:0 0 6px">Kontakt i szybka wycena</h1>
+    <div class="hint">Formularz działa bez serwera: po kliknięciu otworzy się Twoja poczta z gotową wiadomością.</div>
+  </div>
+
+  <div class="wrap">
+    <form class="card" id="quoteForm">
+      <div class="row2">
+        <div>
+          <label for="name">Imię i nazwisko / Firma</label>
+          <input id="name" name="name" placeholder="np. Marcin / firma" required />
+        </div>
+        <div>
+          <label for="phone">Telefon</label>
+          <input id="phone" name="phone" placeholder="np. +48 600 000 000" />
+        </div>
+      </div>
+
+      <label for="email">E-mail</label>
+      <input id="email" name="email" type="email" placeholder="np. kontakt@firma.pl" required />
+
+      <div class="row2">
+        <div>
+          <label for="type">Rodzaj zlecenia</label>
+          <select id="type" name="type">
+            <option>stelaż / rama</option>
+            <option>nogi / podstawa</option>
+            <option>schody / konstrukcja schodowa</option>
+            <option>zabudowy koszy</option>
+            <option>metal + drewno</option>
+            <option>detale (laser/gięcie)</option>
+            <option>inne</option>
+          </select>
+        </div>
+        <div>
+          <label for="qty">Ilość</label>
+          <input id="qty" name="qty" type="number" min="1" value="1" />
+        </div>
+      </div>
+
+      <div class="row2">
+        <div>
+          <label for="material">Materiał</label>
+          <select id="material" name="material">
+            <option>stal czarna</option>
+            <option>inox (nierdzewna)</option>
+            <option>ocynk</option>
+            <option>inne (w opisie)</option>
+          </select>
+        </div>
+        <div>
+          <label for="ral">Kolor (paleta RAL)</label>
+          <select id="ral" name="ral">
+            <option value="RAL 9005">RAL 9005 – czarny</option>
+            <option value="RAL 7016">RAL 7016 – antracyt</option>
+            <option value="RAL 9003">RAL 9003 – biały</option>
+            <option value="RAL 7035">RAL 7035 – jasny szary</option>
+            <option value="INNY">Inny RAL (w opisie)</option>
+          </select>
+        </div>
+      </div>
+
+      <label for="desc">Opis / wymagania</label>
+      <textarea id="desc" name="desc" placeholder="Wymiary, tolerancje, termin. Jeśli masz PDF/DXF/STEP – dopisz, że doślesz w mailu."></textarea>
+
+      <button class="btn" type="submit">Wyślij zapytanie</button>
+      <div class="hint">Ustaw docelowy e-mail (poniżej w JS) na swój firmowy.</div>
+    </form>
+
+    <div class="card contact">
+      <div class="box">
+        <b>Telefon</b>
+        <div class="hint"><a href="tel:+48600000000">+48 600 000 000</a></div>
+      </div>
+      <div class="box">
+        <b>E-mail</b>
+        <div class="hint"><a href="mailto:wycena@iron-em.pl">wycena@iron-em.pl</a></div>
+      </div>
+      <div class="box">
+        <b>Lokalizacja</b>
+        <div class="hint">Bielsko-Biała i okolice • wysyłka PL</div>
+      </div>
+      <div class="box">
+        <b>Godziny</b>
+        <div class="hint">Pn–Pt 6:00–14:00 (lub wg ustaleń)</div>
+      </div>
+      <div class="box">
+        <b>Co robimy</b>
+        <div class="hint">Stelaże • nogi • schody • zabudowy koszy • metal+drewno • RAL</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">© <span id="year"></span> Iron-Em</div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const form = document.getElementById('quoteForm');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+
+    const name = (data.get('name')||'').toString().trim();
+    const phone = (data.get('phone')||'').toString().trim();
+    const email = (data.get('email')||'').toString().trim();
+    const type = (data.get('type')||'').toString().trim();
+    const qty = (data.get('qty')||'').toString().trim();
+    const material = (data.get('material')||'').toString().trim();
+    const ral = (data.get('ral')||'').toString().trim();
+    const desc = (data.get('desc')||'').toString().trim();
+
+    // ZMIEŃ NA SWÓJ DOCELOWY E-MAIL:
+    const to = 'wycena@iron-em.pl';
+
+    const subject = encodeURIComponent(`Wycena – ${type} – ${qty} szt. – ${material} – ${ral}`);
+    const body = encodeURIComponent(
+`Dzień dobry,
+
+Proszę o wycenę:
+
+• Klient: ${name}
+• Telefon: ${phone}
+• E-mail: ${email}
+• Rodzaj: ${type}
+• Materiał: ${material}
+• Kolor (RAL): ${ral}
+• Ilość: ${qty}
+
+Opis / wymagania:
+${desc}
+
+Pliki (PDF/DXF/STEP) doślę w załączniku w odpowiedzi na tę wiadomość.
+
+Pozdrawiam`
+    );
+
+    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+  });
+</script>
+</body>
+</html>
