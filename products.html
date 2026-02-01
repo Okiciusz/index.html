@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iron-Em – galeria produktów</title>
+  <meta name="description" content="Galeria produktów Iron-Em: stelaże, nogi, schody, zabudowy koszy, metal + drewno, kolory RAL." />
+  <meta name="theme-color" content="#0b0f14" />
+  <style>
+    :root{--bg:#0b0f14;--panel:#111826;--text:#e7edf6;--muted:#a8b3c7;--line:rgba(255,255,255,.10);--shadow:0 10px 30px rgba(0,0,0,.45);--radius:18px;--max:1120px}
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:50;background:rgba(11,15,20,.78);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:12px}
+    .brand{font-weight:900;letter-spacing:.3px}
+    .btn{border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--text);padding:10px 14px;border-radius:999px;font-weight:800;font-size:14px;display:inline-flex;gap:10px}
+    .btn:hover{background:rgba(255,255,255,.10)}
+    .hero{padding:22px 0}
+    .card{border:1px solid var(--line);background:rgba(17,24,38,.85);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .head{padding:18px}
+    .muted{color:var(--muted)}
+    .filters{display:flex;flex-wrap:wrap;gap:10px;padding:0 18px 18px}
+    .tag{padding:8px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-weight:800;font-size:12px;cursor:pointer;background:rgba(255,255,255,.04)}
+    .tag.active{color:var(--text);background:rgba(255,255,255,.10)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:18px}
+    .item{padding:14px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.04);cursor:pointer}
+    .ph{aspect-ratio:4/3;border-radius:14px;border:1px solid var(--line);background:
+      linear-gradient(135deg, rgba(70,214,162,.20), rgba(105,167,255,.15)),
+      repeating-linear-gradient(45deg, rgba(255,255,255,.08) 0 2px, transparent 2px 10px);}
+    .item b{display:block;margin-top:10px}
+    .item small{color:var(--muted);font-weight:700}
+    footer{padding:20px 0;border-top:1px solid var(--line);color:var(--muted)}
+    @media(max-width:980px){.grid{grid-template-columns:1fr}}
+    .modal{position:fixed;inset:0;display:none;place-items:center;background:rgba(0,0,0,.65);padding:18px}
+    .modal.open{display:grid}
+    .box{width:min(920px,100%);border-radius:18px;border:1px solid var(--line);background:rgba(17,24,38,.96);box-shadow:var(--shadow);overflow:hidden}
+    .top{display:flex;justify-content:space-between;align-items:center;padding:14px;border-bottom:1px solid var(--line)}
+    .x{border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--text);border-radius:12px;padding:8px 10px;cursor:pointer}
+    .img{aspect-ratio:16/9;border-bottom:1px solid var(--line);background:
+      linear-gradient(135deg, rgba(70,214,162,.20), rgba(105,167,255,.12)),
+      repeating-linear-gradient(45deg, rgba(255,255,255,.08) 0 2px, transparent 2px 10px);}
+    .body{padding:14px;color:var(--muted)}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html">Iron-Em</a>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="index.html">Strona główna</a>
+        <a class="btn" href="contact.html">Kontakt / Wycena</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container hero">
+  <div class="card">
+    <div class="head">
+      <h1 style="margin:0 0 6px">Galeria produktów</h1>
+      <div class="muted">Kliknij kafelek, żeby otworzyć podgląd. Zdjęcia podmienisz później na własne.</div>
+    </div>
+
+    <div class="filters" id="filters">
+      <div class="tag active" data-filter="all">Wszystko</div>
+      <div class="tag" data-filter="frames">Stelaże / ramy</div>
+      <div class="tag" data-filter="legs">Nogi / podstawy</div>
+      <div class="tag" data-filter="stairs">Schody</div>
+      <div class="tag" data-filter="bins">Zabudowy koszy</div>
+      <div class="tag" data-filter="wood">Metal + drewno</div>
+      <div class="tag" data-filter="ral">Kolory RAL</div>
+    </div>
+
+    <div class="grid" id="grid">
+      <div class="item" data-cat="frames" data-title="Stelaż – seria" data-desc="Krótkie serie, kontrola geometrii, przygotowanie pod montaż.">
+        <div class="ph"></div><b>Stelaż – seria</b><small>Stelaże / ramy</small>
+      </div>
+      <div class="item" data-cat="legs" data-title="Nogi do stołu" data-desc="Nogi/podstawy – stal czarna lub INOX. Możliwe malowanie RAL.">
+        <div class="ph"></div><b>Nogi do stołu</b><small>Nogi / podstawy</small>
+      </div>
+      <div class="item" data-cat="stairs" data-title="Konstrukcja schodowa" data-desc="Schody i konstrukcje pod stopnie, balustrady, podesty.">
+        <div class="ph"></div><b>Konstrukcja schodowa</b><small>Schody</small>
+      </div>
+      <div class="item" data-cat="bins" data-title="Zabudowa koszy" data-desc="Zabudowy i osłony koszy – elementy pod zabudowę, powtarzalne wymiary.">
+        <div class="ph"></div><b>Zabudowa koszy</b><small>Zabudowy koszy</small>
+      </div>
+      <div class="item" data-cat="wood" data-title="Metal + drewno" data-desc="Komplet: konstrukcja stalowa + element drewniany (blat/stopień).">
+        <div class="ph"></div><b>Metal + drewno</b><small>Metal + drewno</small>
+      </div>
+      <div class="item" data-cat="ral" data-title="Malowanie RAL" data-desc="Dobór koloru z palety RAL (mat/połysk/struktura – wg ustaleń).">
+        <div class="ph"></div><b>Malowanie RAL</b><small>Kolory RAL</small>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">© <span id="year"></span> Iron-Em</div>
+</footer>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="box" role="dialog" aria-modal="true">
+    <div class="top"><b id="mTitle">Podgląd</b><button class="x" id="close">Zamknij ✕</button></div>
+    <div class="img" id="mImg"></div>
+    <div class="body" id="mDesc"></div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const tags = [...document.querySelectorAll('.tag')];
+  const items = [...document.querySelectorAll('.item')];
+
+  tags.forEach(t => t.addEventListener('click', () => {
+    tags.forEach(x => x.classList.remove('active'));
+    t.classList.add('active');
+    const f = t.dataset.filter;
+    items.forEach(it => {
+      it.style.display = (f === 'all' || it.dataset.cat === f) ? '' : 'none';
+    });
+  }));
+
+  const modal = document.getElementById('modal');
+  const mTitle = document.getElementById('mTitle');
+  const mDesc = document.getElementById('mDesc');
+  const close = document.getElementById('close');
+
+  items.forEach(it => it.addEventListener('click', () => {
+    mTitle.textContent = it.dataset.title || 'Podgląd';
+    mDesc.textContent = it.dataset.desc || '';
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+  }));
+
+  function hide(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); }
+  close.addEventListener('click', hide);
+  modal.addEventListener('click', (e)=>{ if(e.target===modal) hide(); });
+  document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') hide(); });
+</script>
+</body>
+</html>
