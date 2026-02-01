@@ -3,30 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Em-Steel – elementy metalowe na wymiar</title>
-  <meta name="description" content="Mikrofirma produkcyjna: stelaże, nogi do stołów, detale stalowe i nierdzewne. Krótkie serie, prototypy, szybkie terminy. Wycena w 24h." />
+  <title>Iron-Em – elementy metalowe na wymiar</title>
+  <meta name="description" content="Mikrofirma produkcyjna: stelaże, nogi, schody, zabudowy koszy, detale stalowe i nierdzewne. Krótkie serie, prototypy, kolory RAL. Wycena w 24h." />
   <meta name="theme-color" content="#0b0f14" />
 
-  <!-- Open Graph (pod podgląd linku w SMS/Teams/Facebook) -->
-  <meta property="og:title" content="Em-Steel – elementy metalowe na wymiar" />
-  <meta property="og:description" content="Stelaże, nogi, detale stalowe. Krótkie serie i prototypy. Wycena w 24h." />
+  <meta property="og:title" content="Iron-Em – elementy metalowe na wymiar" />
+  <meta property="og:description" content="Stelaże, nogi, schody, zabudowy koszy, detale stalowe. Krótkie serie i prototypy. Kolory RAL. Wycena w 24h." />
   <meta property="og:type" content="website" />
 
   <style>
     :root{
-      --bg:#0b0f14;
-      --panel:#111826;
-      --panel2:#0f1623;
-      --text:#e7edf6;
-      --muted:#a8b3c7;
-      --brand:#46d6a2;
-      --brand2:#69a7ff;
+      --bg:#0b0f14; --panel:#111826; --panel2:#0f1623;
+      --text:#e7edf6; --muted:#a8b3c7;
+      --brand:#46d6a2; --brand2:#69a7ff;
       --line:rgba(255,255,255,.10);
       --shadow: 0 10px 30px rgba(0,0,0,.45);
-      --radius: 18px;
-      --max: 1120px;
+      --radius: 18px; --max: 1120px;
     }
-
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
@@ -35,75 +28,42 @@
       background: radial-gradient(1200px 600px at 20% -10%, rgba(105,167,255,.25), transparent 55%),
                   radial-gradient(900px 500px at 80% 10%, rgba(70,214,162,.18), transparent 60%),
                   var(--bg);
-      color:var(--text);
-      line-height:1.45;
+      color:var(--text); line-height:1.45;
     }
     a{color:inherit; text-decoration:none}
-
     .container{max-width:var(--max); margin:0 auto; padding:0 20px}
 
-    /* Header */
     header{
       position:sticky; top:0; z-index:50;
       backdrop-filter: blur(10px);
       background: rgba(11,15,20,.72);
       border-bottom: 1px solid var(--line);
     }
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0;
-      gap:14px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:10px;
-      font-weight:800; letter-spacing:.3px;
-    }
-    .logo{
-      width:34px; height:34px; border-radius:10px;
-      background: linear-gradient(135deg, var(--brand), var(--brand2));
-      box-shadow: 0 12px 25px rgba(70,214,162,.20);
-    }
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0; gap:14px}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.3px}
+    .logo{width:34px; height:34px; border-radius:10px; background: linear-gradient(135deg, var(--brand), var(--brand2)); box-shadow: 0 12px 25px rgba(70,214,162,.20)}
     nav ul{list-style:none; display:flex; gap:18px; margin:0; padding:0}
     nav a{color:var(--muted); font-weight:600; font-size:14px}
     nav a:hover{color:var(--text)}
-
-    .cta{
-      display:flex; align-items:center; gap:10px;
-    }
+    .cta{display:flex; align-items:center; gap:10px}
     .btn{
       border:1px solid var(--line);
       background: rgba(255,255,255,.06);
       color:var(--text);
       padding:10px 14px;
       border-radius: 999px;
-      font-weight:700;
-      font-size:14px;
+      font-weight:700; font-size:14px;
       transition: transform .15s ease, background .15s ease, border-color .15s ease;
       display:inline-flex; align-items:center; gap:10px;
       cursor:pointer;
     }
     .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.18)}
-    .btn.primary{
-      border: 1px solid rgba(70,214,162,.35);
-      background: linear-gradient(135deg, rgba(70,214,162,.25), rgba(105,167,255,.18));
-    }
-
+    .btn.primary{border: 1px solid rgba(70,214,162,.35); background: linear-gradient(135deg, rgba(70,214,162,.25), rgba(105,167,255,.18))}
     .hamburger{display:none}
 
-    /* Hero */
     .hero{padding:56px 0 24px}
-    .heroGrid{
-      display:grid;
-      grid-template-columns: 1.25fr .75fr;
-      gap:18px;
-      align-items:stretch;
-    }
-    .card{
-      border:1px solid var(--line);
-      background: linear-gradient(180deg, rgba(17,24,38,.85), rgba(15,22,35,.70));
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
+    .heroGrid{display:grid; grid-template-columns: 1.25fr .75fr; gap:18px; align-items:stretch}
+    .card{border:1px solid var(--line); background: linear-gradient(180deg, rgba(17,24,38,.85), rgba(15,22,35,.70)); border-radius: var(--radius); box-shadow: var(--shadow)}
     .heroMain{padding:28px}
     .kicker{color:var(--muted); font-weight:700; font-size:13px; letter-spacing:.3px}
     h1{margin:10px 0 12px; font-size: clamp(28px, 3.2vw, 44px); line-height:1.08}
@@ -111,18 +71,11 @@
     .pillRow{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px}
     .pill{border:1px solid var(--line); padding:8px 10px; border-radius: 999px; color:var(--muted); font-weight:700; font-size:12px; background: rgba(255,255,255,.04)}
     .heroActions{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
-
     .heroSide{padding:22px; display:flex; flex-direction:column; gap:14px}
-    .stat{
-      display:flex; justify-content:space-between; align-items:flex-start;
-      padding:14px; border-radius: 14px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.04);
-    }
+    .stat{display:flex; justify-content:space-between; align-items:flex-start; padding:14px; border-radius: 14px; border:1px solid var(--line); background: rgba(255,255,255,.04)}
     .stat strong{font-size:18px}
     .stat span{color:var(--muted); font-weight:700; font-size:12px}
 
-    /* Sections */
     section{padding:26px 0}
     .sectionHead{display:flex; align-items:flex-end; justify-content:space-between; gap:12px; margin-bottom:14px}
     .sectionHead h2{margin:0; font-size:22px}
@@ -132,106 +85,26 @@
     .tile{padding:18px}
     .tile h3{margin:10px 0 6px; font-size:16px}
     .tile p{margin:0; color:var(--muted); font-size:14px}
-    .icon{
-      width:42px; height:42px; border-radius: 14px;
-      display:grid; place-items:center;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.05);
-      font-weight:900;
-    }
+    .icon{width:42px; height:42px; border-radius: 14px; display:grid; place-items:center; border:1px solid var(--line); background: rgba(255,255,255,.05); font-weight:900}
 
-    /* Gallery */
-    .gallery{display:grid; grid-template-columns: repeat(12, 1fr); gap:12px}
-    .ph{
-      grid-column: span 4;
-      aspect-ratio: 4/3;
-      border-radius: 16px;
-      border:1px solid var(--line);
-      background:
-        linear-gradient(135deg, rgba(70,214,162,.20), rgba(105,167,255,.15)),
-        repeating-linear-gradient(45deg, rgba(255,255,255,.08) 0 2px, transparent 2px 10px);
-      position:relative;
-      overflow:hidden;
-      cursor:pointer;
-      transition: transform .15s ease;
-    }
-    .ph:hover{transform: translateY(-2px)}
-    .ph .cap{position:absolute; left:12px; bottom:10px; right:12px; font-weight:800; font-size:13px}
-    .ph .tag{display:inline-block; margin-top:6px; color:var(--muted); font-weight:700; font-size:12px}
-
-    /* Process */
     .steps{display:grid; grid-template-columns: repeat(4, 1fr); gap:12px}
     .step{padding:16px}
     .step .n{color:var(--muted); font-weight:900; font-size:12px; letter-spacing:.6px}
     .step h3{margin:8px 0 6px; font-size:15px}
 
-    /* Form */
-    .formWrap{display:grid; grid-template-columns: 1fr 1fr; gap:14px}
-    form{padding:18px}
-    label{display:block; font-weight:800; font-size:12px; color:var(--muted); margin:10px 0 6px}
-    input, textarea, select{
-      width:100%;
-      padding:12px 12px;
-      border-radius: 14px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      color:var(--text);
-      outline:none;
-      font-size:14px;
-    }
-    textarea{min-height:120px; resize:vertical}
-    .row2{display:grid; grid-template-columns: 1fr 1fr; gap:10px}
-    .hint{color:var(--muted); font-size:12px; margin-top:8px}
-
-    .contactCard{padding:18px; display:flex; flex-direction:column; gap:12px}
-    .contactItem{padding:12px; border-radius: 14px; border:1px solid var(--line); background: rgba(255,255,255,.04)}
-    .contactItem b{display:block; margin-bottom:4px}
-    .tiny{color:var(--muted); font-size:12px}
-
-    /* Footer */
     footer{padding:24px 0 34px; border-top:1px solid var(--line); color:var(--muted)}
     .foot{display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap}
+    .tiny{color:var(--muted); font-size:12px}
 
-    /* Modal */
-    .modal{
-      position:fixed; inset:0; display:none; place-items:center; z-index:100;
-      background: rgba(0,0,0,.65);
-      padding:18px;
-    }
-    .modal.open{display:grid}
-    .modalBox{
-      width:min(920px, 100%);
-      border-radius: 18px;
-      border:1px solid var(--line);
-      background: linear-gradient(180deg, rgba(17,24,38,.96), rgba(15,22,35,.92));
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    .modalTop{display:flex; justify-content:space-between; align-items:center; padding:14px 14px; border-bottom:1px solid var(--line)}
-    .modalTop b{font-size:14px}
-    .x{border:1px solid var(--line); background: rgba(255,255,255,.06); color:var(--text); border-radius: 12px; padding:8px 10px; cursor:pointer}
-    .modalImg{
-      aspect-ratio: 16/9;
-      background:
-        linear-gradient(135deg, rgba(70,214,162,.20), rgba(105,167,255,.12)),
-        repeating-linear-gradient(45deg, rgba(255,255,255,.08) 0 2px, transparent 2px 10px);
-    }
-    .modalBody{padding:14px; color:var(--muted)}
-
-    /* Responsive */
     @media (max-width: 980px){
-      .heroGrid{grid-template-columns: 1fr;}
-      .grid3{grid-template-columns: 1fr;}
-      .steps{grid-template-columns: 1fr 1fr;}
-      .formWrap{grid-template-columns: 1fr;}
-      .gallery .ph{grid-column: span 6;}
+      .heroGrid{grid-template-columns: 1fr}
+      .grid3{grid-template-columns: 1fr}
+      .steps{grid-template-columns: 1fr 1fr}
       nav ul{display:none}
       .hamburger{display:inline-flex}
     }
     @media (max-width: 520px){
-      .steps{grid-template-columns: 1fr;}
-      .gallery .ph{grid-column: span 12;}
-      .row2{grid-template-columns: 1fr;}
+      .steps{grid-template-columns: 1fr}
     }
   </style>
 </head>
@@ -240,24 +113,23 @@
   <header>
     <div class="container">
       <div class="nav">
-        <a class="brand" href="#top" aria-label="Strona główna">
+        <a class="brand" href="index.html" aria-label="Strona główna">
           <span class="logo" aria-hidden="true"></span>
-          <span>Em-Steel</span>
+          <span>Iron-Em</span>
         </a>
 
         <nav aria-label="Nawigacja">
           <ul>
             <li><a href="#oferta">Oferta</a></li>
-            <li><a href="#realizacje">Realizacje</a></li>
             <li><a href="#proces">Jak pracujemy</a></li>
-            <li><a href="#wycena">Wycena</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="products.html">Galeria produktów</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
           </ul>
         </nav>
 
         <div class="cta">
-          <a class="btn" href="#wycena">Szybka wycena</a>
-          <a class="btn primary" href="#kontakt">Zadzwoń / Napisz</a>
+          <a class="btn" href="contact.html">Szybka wycena</a>
+          <a class="btn primary" href="contact.html">Zadzwoń / Napisz</a>
           <button class="btn hamburger" id="menuBtn" aria-label="Menu">☰</button>
         </div>
       </div>
@@ -265,39 +137,37 @@
   </header>
 
   <main id="top">
-    <!-- HERO -->
     <div class="container hero">
       <div class="heroGrid">
         <div class="card heroMain">
           <div class="kicker">Mikrofirma produkcyjna • krótkie serie • prototypy</div>
           <h1>Elementy metalowe na wymiar, bez chaosu i opóźnień</h1>
           <p class="lead">
-            Wykonujemy stelaże, nogi do stołów, detale stalowe i nierdzewne (czarna stal, INOX),
-            pod meble i zabudowy. Małe i średnie serie, szybkie terminy, powtarzalna jakość.
+            Wykonujemy stelaże, nogi, schody i konstrukcje, zabudowy koszy, detale stalowe i nierdzewne (czarna stal, INOX).
+            Krótkie serie, szybkie terminy, powtarzalna jakość. Malowanie z palety RAL.
           </p>
 
           <div class="pillRow" aria-label="Specjalizacje">
             <span class="pill">Stelaże i ramy</span>
             <span class="pill">Nogi do stołów</span>
-            <span class="pill">Detale laser / gięcie</span>
-            <span class="pill">Spawanie i szlif</span>
-            <span class="pill">Krótkie serie</span>
-            <span class="pill">Kolory RAL</span>
             <span class="pill">Schody stalowe</span>
+            <span class="pill">Zabudowy koszy</span>
             <span class="pill">Metal + drewno</span>
+            <span class="pill">Kolory RAL</span>
+            <span class="pill">Krótkie serie</span>
             <span class="pill">Wycena w 24h*</span>
           </div>
 
           <div class="heroActions">
-            <a class="btn primary" href="#wycena">Wyceń projekt</a>
-            <a class="btn" href="#realizacje">Zobacz realizacje</a>
+            <a class="btn primary" href="contact.html">Wyceń projekt</a>
+            <a class="btn" href="products.html">Galeria produktów</a>
             <a class="btn" href="#oferta">Co robimy</a>
           </div>
-          <div class="hint">* Standardowo 24h w dni robocze – zależnie od kompletności danych (rysunek / wymiary / materiał).</div>
+          <div class="tiny" style="margin-top:10px">* Standardowo 24h w dni robocze – zależnie od kompletności danych (rysunek / wymiary / materiał).</div>
         </div>
 
         <aside class="card heroSide" aria-label="Szybkie informacje">
-          <div class="stat"><div><strong>Małe serie</strong><div class="tiny">od 1 szt. do kilkuset</div></div><span>PRODUKCJA</span></div>
+          <div class="stat"><div><strong>Małe serie</strong><div class="tiny">od 1 szt. do kilkudziesięciu</div></div><span>PRODUKCJA</span></div>
           <div class="stat"><div><strong>Powtarzalność</strong><div class="tiny">standard pracy + kontrola</div></div><span>JAKOŚĆ</span></div>
           <div class="stat"><div><strong>Terminowość</strong><div class="tiny">plan + komunikacja</div></div><span>LEAN</span></div>
           <div class="stat"><div><strong>Materiały</strong><div class="tiny">stal czarna / INOX / ocynk</div></div><span>SUROWCE</span></div>
@@ -305,70 +175,50 @@
       </div>
     </div>
 
-    <!-- OFERTA -->
     <section id="oferta">
       <div class="container">
         <div class="sectionHead">
           <div>
             <h2>Oferta</h2>
-            <p>Skupiamy się na elementach, które muszą „pasować od razu” – bo w meblach i zabudowach tolerancje mają znaczenie.</p>
+            <p>Robimy elementy, które mają „pasować od razu”: stelaże, nogi, schody, zabudowy koszy oraz rozwiązania metal + drewno. Malowanie kolorami RAL ustalamy w wycenie.</p>
           </div>
         </div>
 
-        <div class="grid3">$1
+        <div class="grid3">
+          <div class="card tile">
+            <div class="icon">▦</div>
+            <h3>Stelaże, ramy, konstrukcje</h3>
+            <p>Ramy pod siedziska, blaty, zabudowy, szafki, zabudowy koszy. Prototypy + krótkie serie.</p>
+          </div>
+          <div class="card tile">
+            <div class="icon">└┐</div>
+            <h3>Nogi i podstawy</h3>
+            <p>Nogi do stołów i stolików, podstawy pod blaty (stal czarna / INOX). Możliwość malowania RAL.</p>
+          </div>
           <div class="card tile">
             <div class="icon">⤴</div>
             <h3>Schody stalowe i konstrukcje</h3>
-            <p>Schody wewnętrzne, konstrukcje pod stopnie, podesty i balustrady. Projekt pod wymiar + prototyp/akceptacja.</p>
+            <p>Schody wewnętrzne, konstrukcje pod stopnie, podesty i balustrady. Pod wymiar, z kontrolą geometrii.</p>
           </div>
           <div class="card tile">
             <div class="icon">▣</div>
             <h3>Metal + drewno</h3>
-            <p>Komplety: stelaż stalowy + elementy drewniane (np. blaty/stopnie). Koordynacja wymiarów i przygotowanie pod montaż.</p>
+            <p>Komplety: stelaż stalowy + elementy drewniane (np. blaty/stopnie). Koordynacja wymiarów pod montaż.</p>
           </div>
           <div class="card tile">
             <div class="icon">🎨</div>
             <h3>Malowanie – paleta RAL</h3>
-            <p>Dobór koloru z palety RAL (mat/połysk/struktura – zależnie od wykonania). Ustalamy wymagania w wycenie.</p>
+            <p>Dobór koloru z palety RAL (mat/połysk/struktura – wg ustaleń). Kolor wpisujesz w zapytaniu.</p>
+          </div>
+          <div class="card tile">
+            <div class="icon">⟂</div>
+            <h3>Detale: laser / gięcie / spaw</h3>
+            <p>Detale przygotowane pod lakier lub montaż. Powtarzalność serii + checklisty kontroli.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- REALIZACJE -->
-    <section id="realizacje">
-      <div class="container">
-        <div class="sectionHead">
-          <div>
-            <h2>Realizacje</h2>
-            <p>Tu wstaw swoje zdjęcia (na start są placeholdery). Po kliknięciu otworzy się podgląd.</p>
-          </div>
-        </div>
-
-        <div class="gallery" role="list">
-          <div class="ph" role="listitem" data-title="Stelaż umywalkowy" data-desc="INOX, spaw + szlif. Przygotowanie pod montaż." aria-label="Stelaż umywalkowy">
-            <div class="cap">Stelaż umywalkowy<br><span class="tag">INOX • prototyp</span></div>
-          </div>
-          <div class="ph" role="listitem" data-title="Nogi do stołu" data-desc="Stal czarna, detale gięte, powtarzalna seria." aria-label="Nogi do stołu">
-            <div class="cap">Nogi do stołu<br><span class="tag">stal czarna • seria</span></div>
-          </div>
-          <div class="ph" role="listitem" data-title="Rama pod zabudowę" data-desc="Rama spawana, kontrola kąta i przekątnych." aria-label="Rama pod zabudowę">
-            <div class="cap">Rama pod zabudowę<br><span class="tag">spaw • kontrola</span></div>
-          </div>
-          <div class="ph" role="listitem" data-title="Detale laser + gięcie" data-desc="Komplet detali pod montaż – przygotowane pod lakier." aria-label="Detale laser + gięcie">
-            <div class="cap">Detale laser + gięcie<br><span class="tag">detale • lakier</span></div>
-          </div>
-          <div class="ph" role="listitem" data-title="Stelaż siedziska" data-desc="Stabilny stelaż, spoiny pod szlif, powtarzalna geometria." aria-label="Stelaż siedziska">
-            <div class="cap">Stelaż siedziska<br><span class="tag">meble • powtarzalność</span></div>
-          </div>
-          <div class="ph" role="listitem" data-title="Podstawa pod blat" data-desc="Kontrukcja do stołów, przygotowana pod montaż i transport." aria-label="Podstawa pod blat">
-            <div class="cap">Podstawa pod blat<br><span class="tag">transport • montaż</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROCES -->
     <section id="proces">
       <div class="container">
         <div class="sectionHead">
@@ -382,7 +232,7 @@
           <div class="card step">
             <div class="n">KROK 1</div>
             <h3>Wycena i ustalenia</h3>
-            <p class="tiny">Rysunek / wymiary / materiał / ilość / termin.</p>
+            <p class="tiny">Rysunek / wymiary / materiał / ilość / termin / RAL.</p>
           </div>
           <div class="card step">
             <div class="n">KROK 2</div>
@@ -392,7 +242,7 @@
           <div class="card step">
             <div class="n">KROK 3</div>
             <h3>Produkcja + kontrola</h3>
-            <p class="tiny">Powtarzalność: standard + kontrola wymiaru i geometrii.</p>
+            <p class="tiny">Kontrola wymiarów i geometrii. Powtarzalność serii.</p>
           </div>
           <div class="card step">
             <div class="n">KROK 4</div>
@@ -400,118 +250,14 @@
             <p class="tiny">Pakowanie, etykiety, dokumenty – żeby nic nie zginęło.</p>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- WYCENA + KONTAKT -->
-    <section id="wycena">
-      <div class="container">
-        <div class="sectionHead">
-          <div>
-            <h2>Wycena</h2>
-            <p>Wypełnij formularz i wyślij. Na start działa przez e-mail (bez serwera). Później można podpiąć CRM i upload plików.</p>
-          </div>
-        </div>
-
-        <div class="formWrap">
-          <form class="card" id="quoteForm">
-            <div class="row2">
-              <div>
-                <label for="name">Imię i nazwisko / Firma</label>
-                <input id="name" name="name" placeholder="np. Marcin / Pent / Atepaa" required />
-              </div>
-              <div>
-                <label for="phone">Telefon</label>
-                <input id="phone" name="phone" placeholder="np. +48 600 000 000" />
-              </div>
-            </div>
-
-            <label for="email">E-mail</label>
-            <input id="email" name="email" type="email" placeholder="np. marcin@firma.pl" required />
-
-            <div class="row2">
-              <div>
-                <label for="material">Materiał</label>
-                <select id="material" name="material">
-                  <option>stal czarna</option>
-                  <option>inox (nierdzewna)</option>
-                  <option>ocynk</option>
-                  <option>inne (w opisie)</option>
-                </select>
-              </div>
-              <div>
-                <label for="qty">Ilość</label>
-                <input id="qty" name="qty" type="number" min="1" value="1" />
-              </div>
-            </div>
-
-            <div class="row2">
-              <div>
-                <label for="ral">Kolor (paleta RAL)</label>
-                <select id="ral" name="ral">
-                  <option value="RAL 9005">RAL 9005 – czarny (mat/połysk)</option>
-                  <option value="RAL 7016">RAL 7016 – antracyt</option>
-                  <option value="RAL 9003">RAL 9003 – biały</option>
-                  <option value="RAL 7021">RAL 7021 – czarny szary</option>
-                  <option value="RAL 7040">RAL 7040 – szary okienny</option>
-                  <option value="RAL 7035">RAL 7035 – jasny szary</option>
-                  <option value="RAL 6005">RAL 6005 – zieleń mchu</option>
-                  <option value="RAL 5003">RAL 5003 – niebieski szafirowy</option>
-                  <option value="RAL 3005">RAL 3005 – czerwony wino</option>
-                  <option value="INNY">Inny RAL (w opisie)</option>
-                </select>
-              </div>
-              <div>
-                <label for="type">Rodzaj zlecenia</label>
-                <select id="type" name="type">
-                  <option>stelaż / rama</option>
-                  <option>nogi / podstawa</option>
-                  <option>detale (laser/gięcie)</option>
-                  <option>schody / konstrukcja schodowa</option>
-                  <option>metal + drewno</option>
-                  <option>inne</option>
-                </select>
-              </div>
-            </div>
-
-            <label for="desc">Opis zlecenia</label>
-            <textarea id="desc" name="desc" placeholder="Podaj wymiary, tolerancje, wymagania powierzchni, termin. Jeśli masz rysunek DXF/PDF – dopisz, że doślesz w mailu."></textarea>
-
-            <button class="btn primary" type="submit">Wyślij zapytanie</button>
-            <div class="hint">Po kliknięciu otworzy się Twoja aplikacja pocztowa z gotową wiadomością.</div>
-          </form>
-
-          <div class="card contactCard" id="kontakt">
-            <div class="contactItem">
-              <b>Kontakt</b>
-              <div class="tiny">Uzupełnij poniższe danymi firmy.</div>
-            </div>
-            <div class="contactItem">
-              <b>Telefon</b>
-              <div class="tiny"><a href="tel:+48600000000">+48 600 000 000</a></div>
-            </div>
-            <div class="contactItem">
-              <b>E-mail</b>
-              <div class="tiny"><a href="mailto:wycena@em-steel.pl">wycena@em-steel.pl</a></div>
-            </div>
-            <div class="contactItem">
-              <b>Lokalizacja</b>
-              <div class="tiny">Bielsko-Biała i okolice • wysyłka na terenie PL</div>
-            </div>
-            <div class="contactItem">
-              <b>Godziny</b>
-              <div class="tiny">Pn–Pt 6:00–14:00 (lub wg ustaleń)</div>
-            </div>
-            <div class="contactItem">
-              <b>Social / Portfolio</b>
-              <div class="tiny">Instagram / Facebook / LinkedIn (opcjonalnie)</div>
-            </div>
-          </div>
+        <div style="margin-top:14px">
+          <a class="btn primary" href="contact.html">Wyślij zapytanie o wycenę</a>
+          <a class="btn" href="products.html" style="margin-left:8px">Zobacz galerię</a>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
     <section id="faq">
       <div class="container">
         <div class="sectionHead">
@@ -524,15 +270,15 @@
         <div class="grid3">
           <div class="card tile">
             <h3>Jakie pliki do wyceny?</h3>
-            <p>Najlepiej: PDF z wymiarami + DXF/STEP (jeśli jest). Jeśli nie masz – wystarczy szkic i wymiary.</p>
+            <p>Najlepiej: PDF z wymiarami + DXF/STEP. Jeśli nie masz – wystarczy szkic i wymiary.</p>
           </div>
           <div class="card tile">
             <h3>Czy robicie prototypy?</h3>
             <p>Tak. Dla nowych modeli często robimy 1 szt. do akceptacji, zanim ruszy seria.</p>
           </div>
           <div class="card tile">
-            <h3>Jak wygląda kontrola jakości?</h3>
-            <p>Kontrola wymiarów, geometrii, powtarzalności serii. Przy większych seriach – próbki + checklisty.</p>
+            <h3>Jak dobrać kolor RAL?</h3>
+            <p>Wybierz RAL w zapytaniu. Jeśli chcesz strukturę / mat / połysk – dopisz w opisie.</p>
           </div>
         </div>
       </div>
@@ -542,89 +288,25 @@
   <footer>
     <div class="container">
       <div class="foot">
-        <div>© <span id="year"></span> Em-Steel. Wszystkie prawa zastrzeżone.</div>
+        <div>© <span id="year"></span> Iron-Em. Wszystkie prawa zastrzeżone.</div>
         <div class="tiny">NIP/REGON • Polityka prywatności • Cookies</div>
       </div>
     </div>
   </footer>
 
-  <!-- Modal for gallery -->
-  <div class="modal" id="modal" aria-hidden="true">
-    <div class="modalBox" role="dialog" aria-modal="true" aria-labelledby="mTitle">
-      <div class="modalTop">
-        <b id="mTitle">Podgląd</b>
-        <button class="x" id="closeModal" aria-label="Zamknij">Zamknij ✕</button>
-      </div>
-      <div class="modalImg" id="mImg" aria-hidden="true"></div>
-      <div class="modalBody" id="mDesc">Opis</div>
-    </div>
-  </div>
-
   <script>
-    // Rok w stopce
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Proste "menu" mobilne – podmienia listę linków w alert (minimalizm bez frameworka)
     const menuBtn = document.getElementById('menuBtn');
     if (menuBtn) {
       menuBtn.addEventListener('click', () => {
-        const links = [
-          ['Oferta', '#oferta'],
-          ['Realizacje', '#realizacje'],
-          ['Jak pracujemy', '#proces'],
-          ['Wycena', '#wycena'],
-          ['Kontakt', '#kontakt']
-        ];
-        const choice = prompt('Wpisz numer:\n1) Oferta\n2) Realizacje\n3) Jak pracujemy\n4) Wycena\n5) Kontakt');
-        const i = Number(choice) - 1;
-        if (!Number.isNaN(i) && links[i]) location.hash = links[i][1];
+        const choice = prompt('Wpisz numer:\\n1) Oferta\\n2) Jak pracujemy\\n3) Galeria produktów\\n4) Kontakt');
+        const i = Number(choice);
+        if (i === 1) location.hash = '#oferta';
+        if (i === 2) location.hash = '#proces';
+        if (i === 3) window.location.href = 'products.html';
+        if (i === 4) window.location.href = 'contact.html';
       });
     }
-
-    // Formularz: generuje mailto
-    const form = document.getElementById('quoteForm');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const data = new FormData(form);
-      const name = (data.get('name') || '').toString().trim();
-      const phone = (data.get('phone') || '').toString().trim();
-      const email = (data.get('email') || '').toString().trim();
-      const material = (data.get('material') || '').toString().trim();
-      const qty = (data.get('qty') || '').toString().trim();
-      const ral = (data.get('ral') || '').toString().trim();
-      const type = (data.get('type') || '').toString().trim();
-      const desc = (data.get('desc') || '').toString().trim();
-
-      const to = 'wycena@em-steel.pl';
-      const subject = encodeURIComponent(`Wycena – ${type} – ${qty} szt. – ${material} – ${ral}`);
-      const body = encodeURIComponent(
-`Dzień dobry,\n\nProszę o wycenę:\n\n• Klient: ${name}\n• Telefon: ${phone}\n• E-mail: ${email}\n• Rodzaj: ${type}\n• Materiał: ${material}\n• Kolor (RAL): ${ral}\n• Ilość: ${qty}\n\nOpis / wymagania:\n${desc}\n\nPliki (PDF/DXF/STEP) doślę w załączniku w odpowiedzi na tę wiadomość.\n\nPozdrawiam`);
-
-      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-    });
-
-    // Galeria: modal
-    const modal = document.getElementById('modal');
-    const mTitle = document.getElementById('mTitle');
-    const mDesc = document.getElementById('mDesc');
-    const closeModal = document.getElementById('closeModal');
-
-    document.querySelectorAll('.ph').forEach(el => {
-      el.addEventListener('click', () => {
-        mTitle.textContent = el.dataset.title || 'Podgląd';
-        mDesc.textContent = el.dataset.desc || '';
-        modal.classList.add('open');
-        modal.setAttribute('aria-hidden', 'false');
-      });
-    });
-
-    function hideModal(){
-      modal.classList.remove('open');
-      modal.setAttribute('aria-hidden', 'true');
-    }
-    closeModal.addEventListener('click', hideModal);
-    modal.addEventListener('click', (e) => { if (e.target === modal) hideModal(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hideModal(); });
   </script>
 </body>
 </html>
