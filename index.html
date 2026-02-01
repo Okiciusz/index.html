@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EmSteel – elementy metalowe na wymiar</title>
+  <title>Em-Steel – elementy metalowe na wymiar</title>
   <meta name="description" content="Mikrofirma produkcyjna: stelaże, nogi do stołów, detale stalowe i nierdzewne. Krótkie serie, prototypy, szybkie terminy. Wycena w 24h." />
   <meta name="theme-color" content="#0b0f14" />
 
   <!-- Open Graph (pod podgląd linku w SMS/Teams/Facebook) -->
-  <meta property="og:title" content="EmSteel – elementy metalowe na wymiar" />
+  <meta property="og:title" content="Em-Steel – elementy metalowe na wymiar" />
   <meta property="og:description" content="Stelaże, nogi, detale stalowe. Krótkie serie i prototypy. Wycena w 24h." />
   <meta property="og:type" content="website" />
 
@@ -242,7 +242,7 @@
       <div class="nav">
         <a class="brand" href="#top" aria-label="Strona główna">
           <span class="logo" aria-hidden="true"></span>
-          <span>MetalCraft</span>
+          <span>Em-Steel</span>
         </a>
 
         <nav aria-label="Nawigacja">
@@ -282,6 +282,9 @@
             <span class="pill">Detale laser / gięcie</span>
             <span class="pill">Spawanie i szlif</span>
             <span class="pill">Krótkie serie</span>
+            <span class="pill">Kolory RAL</span>
+            <span class="pill">Schody stalowe</span>
+            <span class="pill">Metal + drewno</span>
             <span class="pill">Wycena w 24h*</span>
           </div>
 
@@ -312,21 +315,21 @@
           </div>
         </div>
 
-        <div class="grid3">
+        <div class="grid3">$1
           <div class="card tile">
-            <div class="icon">▦</div>
-            <h3>Stelaże, ramy, konstrukcje</h3>
-            <p>Ramy pod siedziska, blaty, zabudowy, szafki, smartboxy. Produkcja prototypowa i serie.</p>
+            <div class="icon">⤴</div>
+            <h3>Schody stalowe i konstrukcje</h3>
+            <p>Schody wewnętrzne, konstrukcje pod stopnie, podesty i balustrady. Projekt pod wymiar + prototyp/akceptacja.</p>
           </div>
           <div class="card tile">
-            <div class="icon">└┐</div>
-            <h3>Nogi i podstawy</h3>
-            <p>Nogi do stołów i stolików, podstawy pod blaty (stal czarna / INOX), elementy dekoracyjne.</p>
+            <div class="icon">▣</div>
+            <h3>Metal + drewno</h3>
+            <p>Komplety: stelaż stalowy + elementy drewniane (np. blaty/stopnie). Koordynacja wymiarów i przygotowanie pod montaż.</p>
           </div>
           <div class="card tile">
-            <div class="icon">⟂</div>
-            <h3>Detale: laser / gięcie / spaw</h3>
-            <p>Cięcie i przygotowanie detali, gięcie, spawanie, szlifowanie – gotowe do lakierni lub montażu.</p>
+            <div class="icon">🎨</div>
+            <h3>Malowanie – paleta RAL</h3>
+            <p>Dobór koloru z palety RAL (mat/połysk/struktura – zależnie od wykonania). Ustalamy wymagania w wycenie.</p>
           </div>
         </div>
       </div>
@@ -442,6 +445,35 @@
               </div>
             </div>
 
+            <div class="row2">
+              <div>
+                <label for="ral">Kolor (paleta RAL)</label>
+                <select id="ral" name="ral">
+                  <option value="RAL 9005">RAL 9005 – czarny (mat/połysk)</option>
+                  <option value="RAL 7016">RAL 7016 – antracyt</option>
+                  <option value="RAL 9003">RAL 9003 – biały</option>
+                  <option value="RAL 7021">RAL 7021 – czarny szary</option>
+                  <option value="RAL 7040">RAL 7040 – szary okienny</option>
+                  <option value="RAL 7035">RAL 7035 – jasny szary</option>
+                  <option value="RAL 6005">RAL 6005 – zieleń mchu</option>
+                  <option value="RAL 5003">RAL 5003 – niebieski szafirowy</option>
+                  <option value="RAL 3005">RAL 3005 – czerwony wino</option>
+                  <option value="INNY">Inny RAL (w opisie)</option>
+                </select>
+              </div>
+              <div>
+                <label for="type">Rodzaj zlecenia</label>
+                <select id="type" name="type">
+                  <option>stelaż / rama</option>
+                  <option>nogi / podstawa</option>
+                  <option>detale (laser/gięcie)</option>
+                  <option>schody / konstrukcja schodowa</option>
+                  <option>metal + drewno</option>
+                  <option>inne</option>
+                </select>
+              </div>
+            </div>
+
             <label for="desc">Opis zlecenia</label>
             <textarea id="desc" name="desc" placeholder="Podaj wymiary, tolerancje, wymagania powierzchni, termin. Jeśli masz rysunek DXF/PDF – dopisz, że doślesz w mailu."></textarea>
 
@@ -460,7 +492,7 @@
             </div>
             <div class="contactItem">
               <b>E-mail</b>
-              <div class="tiny"><a href="mailto:wycena@metalcraft.pl">wycena@metalcraft.pl</a></div>
+              <div class="tiny"><a href="mailto:wycena@em-steel.pl">wycena@em-steel.pl</a></div>
             </div>
             <div class="contactItem">
               <b>Lokalizacja</b>
@@ -510,7 +542,7 @@
   <footer>
     <div class="container">
       <div class="foot">
-        <div>© <span id="year"></span> MetalCraft. Wszystkie prawa zastrzeżone.</div>
+        <div>© <span id="year"></span> Em-Steel. Wszystkie prawa zastrzeżone.</div>
         <div class="tiny">NIP/REGON • Polityka prywatności • Cookies</div>
       </div>
     </div>
@@ -559,12 +591,14 @@
       const email = (data.get('email') || '').toString().trim();
       const material = (data.get('material') || '').toString().trim();
       const qty = (data.get('qty') || '').toString().trim();
+      const ral = (data.get('ral') || '').toString().trim();
+      const type = (data.get('type') || '').toString().trim();
       const desc = (data.get('desc') || '').toString().trim();
 
-      const to = 'wycena@metalcraft.pl';
-      const subject = encodeURIComponent(`Wycena – ${qty} szt. – ${material}`);
+      const to = 'wycena@em-steel.pl';
+      const subject = encodeURIComponent(`Wycena – ${type} – ${qty} szt. – ${material} – ${ral}`);
       const body = encodeURIComponent(
-`Dzień dobry,\n\nProszę o wycenę:\n\n• Klient: ${name}\n• Telefon: ${phone}\n• E-mail: ${email}\n• Materiał: ${material}\n• Ilość: ${qty}\n\nOpis / wymagania:\n${desc}\n\nPliki (PDF/DXF/STEP) doślę w załączniku w odpowiedzi na tę wiadomość.\n\nPozdrawiam`);
+`Dzień dobry,\n\nProszę o wycenę:\n\n• Klient: ${name}\n• Telefon: ${phone}\n• E-mail: ${email}\n• Rodzaj: ${type}\n• Materiał: ${material}\n• Kolor (RAL): ${ral}\n• Ilość: ${qty}\n\nOpis / wymagania:\n${desc}\n\nPliki (PDF/DXF/STEP) doślę w załączniku w odpowiedzi na tę wiadomość.\n\nPozdrawiam`);
 
       window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
     });
@@ -594,4 +628,3 @@
   </script>
 </body>
 </html>
-
